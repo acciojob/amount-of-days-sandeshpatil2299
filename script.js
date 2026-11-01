@@ -1,7 +1,10 @@
-//your JS code here. If required.
-let year= prompt("Enter Year");
+let year = prompt("Enter Year");
 
-if((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-    alert(366);
+function daysInYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return 366;
+    }
+    else return 365;
 }
-else alert(365);
+
+alert(daysInYear(year));
